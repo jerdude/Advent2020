@@ -17,7 +17,10 @@ namespace Advent2020
                 switch(input)
                 {
                     case "1":
-                        Console.WriteLine("1");
+                        var day1 = new Day1();
+                        var results = day1.GetSolution();
+                        Console.WriteLine("Solution: " + results.solution);
+                        Console.WriteLine("Bonus:" + results.bonus);
                         break;
                     default:
                         Console.WriteLine("Invalid input.");
