@@ -13,14 +13,21 @@ namespace Advent2020
             do
             {
                 input = Console.ReadLine();
-                Console.WriteLine("aboo");
+
                 switch(input)
                 {
                     case "1":
                         var day1 = new Day1();
-                        var results = day1.GetSolution();
-                        Console.WriteLine("Solution: " + results.solution);
-                        Console.WriteLine("Bonus:" + results.bonus);
+                        var day1Results = day1.GetSolution();
+                        Program.PrintSolution(day1Results.solution, day1Results.bonus);
+                        break;
+                    case "2":
+                        var day2 = new Day2();
+                        var day2Results = day2.GetSolution();
+                        Program.PrintSolution(day2Results.solution, day2Results.bonus);
+                        break;
+                    case "q":
+                        Console.WriteLine("Later.");
                         break;
                     default:
                         Console.WriteLine("Invalid input.");
@@ -28,6 +35,12 @@ namespace Advent2020
                 }
             }
             while (input != "q");
+        }
+
+        private static void PrintSolution(long solution, long bonus)
+        {
+            Console.WriteLine("Solution: " + solution);
+            Console.WriteLine("Bonus: " + bonus);
         }
     }
 }
