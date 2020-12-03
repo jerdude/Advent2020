@@ -26,6 +26,11 @@ namespace Advent2020
                         var day2Results = day2.GetSolution();
                         Program.PrintSolution(day2Results.solution, day2Results.bonus);
                         break;
+                    case "3":
+                        var day3 = new Day3();
+                        var day3Results = day3.GetSolution();
+                        Program.PrintSolution(day3Results.solution, day3Results.bonus);
+                        break;
                     case "q":
                         Console.WriteLine("Later.");
                         break;
